@@ -1,0 +1,11 @@
+{
+  "manifest_version": 2,
+  "name": "Facebook Ticker",
+  "description": "This extension allows you to view latest posts from your favorite Facebook Pages.",
+  "version": "1.0",
+  "browser_action": {
+   "default_icon": "icon.png",
+   "default_popup": "popup.html"
+  },
+  "permissions": ["<all_urls>"]
+}

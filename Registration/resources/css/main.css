@@ -1,0 +1,238 @@
+/*
+    Author : Divya Mamgai
+
+    Force Box-Model --> [width] = [element-width] + [padding] + [borders]
+
+    Also force relative position for everything, this allows to not worry about tags which cannot be easily
+    selected and yet you need to set just one property, i.e., position: relative;, so why create a class or id
+    and populate DOM even more when this can solve our trouble.
+
+    This allows us to position tags in center of the outer ones easily.
+*/
+*, *:after, *:before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    position: relative;
+    /* Support for all WebKit browsers. */
+    -webkit-font-smoothing: antialiased;
+    /* Support for Safari and Chrome. */
+    text-rendering: optimizeLegibility;
+    /* Support for Firefox. */
+    -moz-osx-font-smoothing: grayscale;
+    /* Support for IE. */
+    font-feature-settings: 'liga';
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    width: 100vw;
+    height: 100vh;
+    font-family: Lato, sans-serif;
+    margin: 0;
+    padding: 0;
+    min-width: 360px;
+    color: #1ABC9C;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    background: #212121;
+    overflow-x: hidden;
+}
+
+#MainFrame {
+    position: relative;
+    top: 50vh;
+    margin-top: -2rem;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    -o-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+#RegistrationForm {
+    margin: 5rem auto 5rem auto;
+    font-size: 2.4rem;
+    max-width: 600px;
+}
+
+form label {
+    color: #2ECC71;
+}
+
+form span.Message {
+    display: none;
+}
+
+form input, form textarea, form select {
+    border-color: #475d73;
+    border-bottom-width: 0.2rem;
+}
+
+form select {
+    margin-top: 0.3rem;
+}
+
+#Next, #Previous {
+    position: absolute;
+    font-size: 1.6rem;
+    z-index: 2;
+    top: 0;
+    cursor: pointer;
+    color: #199b7c;
+    visibility: hidden;
+    opacity: 0;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+#Next.Show, #Previous.Show {
+    visibility: visible;
+    opacity: 1;
+}
+
+#Next:hover, #Previous:hover {
+    color: #1ABC9C;
+    -webkit-transform: scale(1.2);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+#Next:active, #Previous:active {
+    color: #14826b;
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(1.1);
+}
+
+#Next {
+    right: 0;
+}
+
+#Previous {
+    left: 0;
+}
+
+.FormRow {
+    position: absolute;
+    width: 100%;
+    left: 1.5rem;
+    margin-top: -3rem;
+    min-height: 9.6rem;
+    opacity: 0;
+    -webkit-transform: translateX(-50rem);
+    -moz-transform: translateX(-50rem);
+    -ms-transform: translateX(-50rem);
+    -o-transform: translateX(-50rem);
+    transform: translateX(-50rem);
+    z-index: 0;
+}
+
+.FormControlRow {
+    text-align: center;
+}
+
+.intl-tel-input.allow-dropdown.separate-dial-code.iti-sdc-3 .selected-flag {
+    display: none;
+}
+
+#Mobile {
+    padding-left: 0.4em !important;
+}
+
+#Header {
+    text-align: center;
+    font-weight: 600;
+    font-size: 6.4rem;
+    color: #27AE60;
+}
+
+#SuccessMessage {
+    text-align: center;
+    font-weight: 600;
+    font-size: 2.4rem;
+    color: #F39C12;
+}
+
+#Presents {
+    text-align: center;
+    margin: 0 0 -2rem 0;
+    font-weight: 600;
+    text-transform: capitalize;
+    color: #2ECC71;
+    font-size: 1.6rem;
+}
+
+#Presents:before {
+    content: '';
+    width: 7rem;
+    height: 0.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translateX(-100%);
+    -moz-transform: translateX(-100%);
+    -ms-transform: translateX(-100%);
+    -o-transform: translateX(-100%);
+    transform: translateX(-100%);
+    margin-left: -5rem;
+    margin-top: 0.1rem;
+}
+
+#Presents:after {
+    content: '';
+    width: 7rem;
+    height: 0.1rem;
+    background-color: rgba(255, 255, 255, 0.1);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: 0.1rem;
+    -webkit-transform: translateX(5rem);
+    -moz-transform: translateX(5rem);
+    -ms-transform: translateX(5rem);
+    -o-transform: translateX(5rem);
+    transform: translateX(5rem);
+}
+
+#GAWDSLogo {
+    display: inline-block;
+    margin: 0 0 -2rem 0;
+    width: 20rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+    fill: #1ABC9C;
+}
+
+textarea {
+    resize: none;
+    max-height: 16rem;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+input[type=submit] {
+    margin: 2rem auto;
+    font-size: 1.6rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
+}

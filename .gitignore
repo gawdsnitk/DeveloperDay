@@ -47,7 +47,3 @@ fabric.properties
 
 .gitignore
 .idea/
-icon.png
-manifest.json
-popup.html
-resources/
