@@ -32,12 +32,12 @@ html, body {
     font-family: Lato, sans-serif;
     margin: 0;
     padding: 0;
-    min-width: 360px;
     color: #1ABC9C;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    min-width: 275px;
     background: #212121;
     overflow-x: hidden;
 }
@@ -207,7 +207,7 @@ form select {
 }
 
 #GAWDSLogo {
-    display: inline-block;
+    display: block;
     margin: 0 0 -2rem 0;
     width: 20rem;
     left: 50%;
@@ -235,4 +235,25 @@ input[type=submit] {
     -ms-transform: translateX(-50%);
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
+}
+
+@media screen and (max-width: 768px) {
+
+    #GAWDSLogo {
+        width: 18rem;
+    }
+
+    #Header {
+        font-size: 4.8rem;
+    }
+
+    #RegistrationForm {
+        font-size: 1.8rem;
+    }
+
+    #Next, #Previous {
+        font-size: 1.2rem;
+        top: -0.8rem;
+    }
+
 }

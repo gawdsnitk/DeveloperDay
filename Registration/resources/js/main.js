@@ -66,8 +66,7 @@
                         opacity: 0,
                         x: '-50rem',
                         zIndex: 1,
-                        display: 'block',
-                        rotationX: 0
+                        display: 'block'
                     }, {
                         opacity: 1,
                         x: '0rem',
@@ -77,12 +76,10 @@
                     });
                     t.staggerFromTo($Object.FormRowAnimatingChildren[fieldIndex], 0.3, {
                         opacity: 0,
-                        x: '-50rem',
-                        rotationX: 45
+                        x: '-50rem'
                     }, {
                         opacity: 1,
                         x: '0rem',
-                        rotationX: 0,
                         clearProps: 'all'
                     }, 0.1);
                 }
