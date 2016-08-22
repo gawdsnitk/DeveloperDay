@@ -34,7 +34,8 @@
                         t.to($Object.RegistrationForm, 0.3, {
                             opacity: 0,
                             y: '10rem',
-                            margin: 0,
+                            marginTop: 0,
+                            marginBottom: 0,
                             onComplete: function () {
                                 $Object.RegistrationForm.css('visibility', 'hidden');
                             }
