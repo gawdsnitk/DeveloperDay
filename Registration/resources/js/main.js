@@ -146,6 +146,11 @@
                     backgroundColor: Globals.BackgroundColors[(Math.random() * Globals.BackgroundColors.length) | 0],
                     onComplete: Functions.BackgroundAnimation
                 });
+            },
+            ShowRegistrationForm: function () {
+                $Object.RegisterButton.css('display', 'none');
+                $Object.FormContainer.css('display', 'block');
+                Functions.ShowField(Globals.CurrentField);
             }
         };
 
@@ -153,6 +158,9 @@
         LoadingObject = new LoadingPopUp();
         $Object.Body = $('body', d);
         $Object.MainFrame = $('#MainFrame', $Object.Body);
+        $Object.InfoContainer = $('#InfoContainer', $Object.MainFrame);
+        $Object.RegisterButton = $('#RegisterButton', $Object.MainFrame).on('click', Functions.ShowRegistrationForm);
+        $Object.FormContainer = $('#FormContainer', $Object.MainFrame);
         $Object.RegistrationForm = $('#RegistrationForm', $Object.MainFrame);
         if ($Object.RegistrationForm.length > 0) {
             Globals.RegistrationForm = $Object.RegistrationForm.Form(Functions.RegistrationFormOnSubmit);
@@ -161,9 +169,7 @@
             $Object.FormRow.each(function () {
                 $Object.FormRowAnimatingChildren.push($(this).find('.col-sm-12').children().filter(':not(.SubmitButton, label)'));
             });
-            if ((Globals.LastField = ($Object.FormRow.length - 1)) >= 0) {
-                Functions.ShowField(Globals.CurrentField);
-            }
+            Globals.LastField = ($Object.FormRow.length - 1);
             $Object.Next = $('#Next', $Object.RegistrationForm).on('click', Functions.Next);
             $Object.Previous = $('#Previous', $Object.RegistrationForm).on('click', Functions.Previous);
             $Object.Mobile = $('#Mobile', $Object.RegistrationForm);
@@ -173,6 +179,9 @@
                     separateDialCode: true,
                     onlyCountries: ['in']
                 });
+            $Object.InterestsAndSkills = $('#InterestsAndSkills', $Object.RegistrationForm)
+                .TextAreaResize()
+                .css('height', '53px');
             $Object.InputElements = $('input, textarea, select', $Object.RegistrationForm)
                 .on('keydown', Functions.InputOnKeyDown);
             t.staggerFromTo($Object.MainFrame.children(), 0.5, {

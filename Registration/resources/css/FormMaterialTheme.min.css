@@ -1,1 +1,97 @@
-form .FormRow>div{perspective:1000px}form input,form textarea,form select{border:0 solid #bfbfbf;border-bottom-width:.2em;outline:0;-webkit-transition:border-color .25s ease-in-out;-moz-transition:border-color .25s ease-in-out;-ms-transition:border-color .25s ease-in-out;-o-transition:border-color .25s ease-in-out;transition:border-color .25s ease-in-out;background:0}form input:focus,form textarea:focus,form select:focus{border-color:#1e90ff}form input.Error,form textarea.Error,form select.Error{border-color:#f44336}form input.Required,form textarea.Required,form select.Required{border-color:#ff9800}form label{font-weight:400;color:#888;-webkit-transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-ms-transition:all .25s ease-in-out;-o-transition:all .25s ease-in-out;transition:all .25s ease-in-out;transform-origin:0 0;-webkit-transform-style:preserve-3d;-moz-transform-style:preserve-3d;-ms-transform-style:preserve-3d;transform-style:preserve-3d;will-change:transform}form label.Animated{-webkit-transform:scale(0.8) translate3d(0,-1.7em,0);-moz-transform:scale(0.8) translate3d(0,-1.7em,0);-ms-transform:scale(0.8) translate3d(0,-1.7em,0);-o-transform:scale(0.8) translate3d(0,-1.7em,0);transform:scale(0.8) translate3d(0,-1.7em,0)}form span.Message{position:absolute;bottom:-0.3em;right:1.4em;z-index:-1;opacity:0;text-overflow:ellipsis;white-space:nowrap;font-size:.7em;line-height:.7em;padding:.7em .5em .7em .5em;color:#fff;background-color:#fff;transform-origin:50% 0 0;-webkit-transform:rotateX(-90deg);-moz-transform:rotateX(-90deg);-ms-transform:rotateX(-90deg);-o-transform:rotateX(-90deg);transform:rotateX(-90deg);-webkit-transition:all .25s ease-in-out;-moz-transition:all .25s ease-in-out;-ms-transition:all .25s ease-in-out;-o-transition:all .25s ease-in-out;transition:all .25s ease-in-out;will-change:transform}form span.Message.Error{color:#ffebee;background-color:#f44336}form span.Message.Required{color:#fff3e0;background-color:#ff9800}form span.Message.Show{opacity:1;-webkit-transform:rotateX(0);-moz-transform:rotateX(0);-ms-transform:rotateX(0);-o-transform:rotateX(0);transform:rotateX(0)}form input[type=submit],form input[type=button],form button{display:inline-block;font-weight:600;position:relative;top:0;width:auto;padding:.4em 1em .3em 1em;border:0;border-bottom:solid .2em #185eb4;background-color:#1e7be6;-webkit-border-radius:.3em;-moz-border-radius:.3em;border-radius:.3em;color:#fff;outline:0;-webkit-transition:background-color .25s ease-in-out,border-color .25s ease-in-out,box-shadow .25s ease-in-out;-moz-transition:background-color .25s ease-in-out,border-color .25s ease-in-out,box-shadow .25s ease-in-out;-ms-transition:background-color .25s ease-in-out,border-color .25s ease-in-out,box-shadow .25s ease-in-out;-o-transition:background-color .25s ease-in-out,border-color .25s ease-in-out,box-shadow .25s ease-in-out;transition:background-color .25s ease-in-out,border-color .25s ease-in-out,box-shadow .25s ease-in-out}form input[type=submit]:hover,form input[type=button]:hover,form button:hover{background-color:#1e90ff;border-color:#1d6acd}form input[type=submit]:focus,form input[type=button]:focus,form button:focus{-webkit-box-shadow:0 0 0 2px #000;-moz-box-shadow:0 0 0 2px #000;box-shadow:0 0 0 2px #000}form input[type=submit]:active,form input[type=button]:active,form button:active{background-color:#1e69cd;border-color:#1d4d9b;top:.1em;border-bottom-width:.1em;margin-bottom:.1em;-webkit-box-shadow:none;-moz-box-shadow:none;box-shadow:none;-webkit-transition:box-shadow 0;-moz-transition:box-shadow 0;-ms-transition:box-shadow 0;-o-transition:box-shadow 0;transition:box-shadow 0}
+form .FormRow > div {
+    perspective: 1000px
+}
+
+form input, form textarea, form select {
+    border: 0 solid #bfbfbf;
+    border-bottom-width: .2em;
+    outline: 0;
+    -webkit-transition: border-color .25s ease-in-out;
+    -moz-transition: border-color .25s ease-in-out;
+    -ms-transition: border-color .25s ease-in-out;
+    -o-transition: border-color .25s ease-in-out;
+    transition: border-color .25s ease-in-out;
+    background: 0
+}
+
+form input:focus, form textarea:focus, form select:focus {
+    border-color: #1e90ff
+}
+
+form input.Error, form textarea.Error, form select.Error {
+    border-color: #f44336
+}
+
+form input.Required, form textarea.Required, form select.Required {
+    border-color: #ff9800
+}
+
+form label {
+    font-weight: 400;
+    color: #888;
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    transform-origin: 0 0;
+    -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
+    -ms-transform-style: preserve-3d;
+    transform-style: preserve-3d;
+    will-change: transform
+}
+
+form label.Animated {
+    -webkit-transform: scale(0.8) translate3d(0, -1.7em, 0);
+    -moz-transform: scale(0.8) translate3d(0, -1.7em, 0);
+    -ms-transform: scale(0.8) translate3d(0, -1.7em, 0);
+    -o-transform: scale(0.8) translate3d(0, -1.7em, 0);
+    transform: scale(0.8) translate3d(0, -1.7em, 0)
+}
+
+form span.Message {
+    position: absolute;
+    bottom: -0.3em;
+    right: 1.4em;
+    z-index: -1;
+    opacity: 0;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: .7em;
+    line-height: .7em;
+    padding: .7em .5em .7em .5em;
+    color: #fff;
+    background-color: #fff;
+    transform-origin: 50% 0 0;
+    -webkit-transform: rotateX(-90deg);
+    -moz-transform: rotateX(-90deg);
+    -ms-transform: rotateX(-90deg);
+    -o-transform: rotateX(-90deg);
+    transform: rotateX(-90deg);
+    -webkit-transition: all .25s ease-in-out;
+    -moz-transition: all .25s ease-in-out;
+    -ms-transition: all .25s ease-in-out;
+    -o-transition: all .25s ease-in-out;
+    transition: all .25s ease-in-out;
+    will-change: transform
+}
+
+form span.Message.Error {
+    color: #ffebee;
+    background-color: #f44336
+}
+
+form span.Message.Required {
+    color: #fff3e0;
+    background-color: #ff9800
+}
+
+form span.Message.Show {
+    opacity: 1;
+    -webkit-transform: rotateX(0);
+    -moz-transform: rotateX(0);
+    -ms-transform: rotateX(0);
+    -o-transform: rotateX(0);
+    transform: rotateX(0)
+}
