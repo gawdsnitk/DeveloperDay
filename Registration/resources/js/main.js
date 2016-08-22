@@ -109,6 +109,7 @@
                         $Object.Previous.addClass('Show');
                         Functions.HideField(Globals.CurrentField++);
                         Functions.ShowField(Globals.CurrentField);
+                        $Object.StepCounter.text(Globals.CurrentField + 1);
                         if (Globals.CurrentField === Globals.LastField) {
                             $Object.Next.removeClass('Show');
                         }
@@ -122,6 +123,7 @@
                     $Object.Next.addClass('Show');
                     Functions.HideField(Globals.CurrentField--);
                     Functions.ShowField(Globals.CurrentField);
+                    $Object.StepCounter.text(Globals.CurrentField + 1);
                     if (Globals.CurrentField === 0) {
                         $Object.Previous.removeClass('Show');
                     }
@@ -151,6 +153,14 @@
             ShowRegistrationForm: function () {
                 $Object.RegisterButton.css('display', 'none');
                 $Object.FormContainer.css('display', 'block');
+                t.fromTo($Object.FormContainer, 0.3, {
+                    opacity: 0,
+                    y: '-10rem',
+                    display: 'block'
+                }, {
+                    opacity: 1,
+                    y: '0rem'
+                });
                 Functions.ShowField(Globals.CurrentField);
             }
         };
@@ -162,6 +172,7 @@
         $Object.InfoContainer = $('#InfoContainer', $Object.MainFrame);
         $Object.RegisterButton = $('#RegisterButton', $Object.MainFrame).on('click', Functions.ShowRegistrationForm);
         $Object.FormContainer = $('#FormContainer', $Object.MainFrame);
+        $Object.StepCounter = $('#StepCounter', $Object.MainFrame);
         $Object.RegistrationForm = $('#RegistrationForm', $Object.MainFrame);
         if ($Object.RegistrationForm.length > 0) {
             Globals.RegistrationForm = $Object.RegistrationForm.Form(Functions.RegistrationFormOnSubmit);

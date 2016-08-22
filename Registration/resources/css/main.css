@@ -219,7 +219,7 @@ form select {
     padding-left: 0.4em !important;
 }
 
-#Header {
+h1 {
     text-align: center;
     font-weight: 600;
     font-size: 6.4rem;
@@ -294,6 +294,12 @@ h2 {
     color: #E67E22;
 }
 
+h3 {
+    font-size: 2.4rem;
+    text-align: center;
+    color: #27AE60;
+}
+
 p {
     font-size: 1.6rem;
     max-width: 64rem;
@@ -358,7 +364,7 @@ form input[type=submit] {
         width: 18rem;
     }
 
-    #Header {
+    h1 {
         font-size: 4.8rem;
     }
 
