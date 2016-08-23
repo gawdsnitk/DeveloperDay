@@ -31,13 +31,13 @@
                 });
                 Globals.RequestXHR.done(function (response, textStatus, jqXHR) {
                     if (typeof response !== 'undefined' && response.result === 'success') {
-                        t.to($Object.RegistrationForm, 0.3, {
+                        t.to($Object.FormContainer, 0.3, {
                             opacity: 0,
                             y: '10rem',
                             marginTop: 0,
                             marginBottom: 0,
                             onComplete: function () {
-                                $Object.RegistrationForm.css('visibility', 'hidden');
+                                $Object.FormContainer.css('visibility', 'hidden');
                             }
                         });
                         t.staggerTo($Object.FormRow.children(), 0.3, {
