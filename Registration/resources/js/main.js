@@ -45,6 +45,15 @@
                                 $Object.FormContainer.css('visibility', 'hidden');
                             }
                         });
+                        t.to($Object.FormRow[Globals.CurrentField], 0.3, {
+                            height: 0,
+                            onComplete: function () {
+                                $(this.target).css({
+                                    display: 'none',
+                                    zIndex: 0
+                                });
+                            }
+                        });
                         t.staggerTo($Object.FormRow.children(), 0.3, {
                             height: 0
                         }, 0);
