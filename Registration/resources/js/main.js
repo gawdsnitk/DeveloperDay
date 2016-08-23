@@ -32,12 +32,26 @@
                 Globals.RequestXHR.done(function (response, textStatus, jqXHR) {
                     if (typeof response !== 'undefined' && response.result === 'success') {
                         t.to($Object.RegistrationForm, 0.3, {
-                            opacity: 0,
                             y: '10rem',
                             marginTop: 0,
                             marginBottom: 0,
                             onComplete: function () {
                                 $Object.RegistrationForm.css('visibility', 'hidden');
+                            }
+                        });
+                        t.to($Object.FormContainer, 0.3, {
+                            opacity: 0,
+                            onComplete: function () {
+                                $Object.FormContainer.css('visibility', 'hidden');
+                            }
+                        });
+                        t.to($Object.FormRow[Globals.CurrentField], 0.3, {
+                            height: 0,
+                            onComplete: function () {
+                                $(this.target).css({
+                                    display: 'none',
+                                    zIndex: 0
+                                });
                             }
                         });
                         t.staggerTo($Object.FormRow.children(), 0.3, {
