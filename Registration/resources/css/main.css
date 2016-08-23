@@ -223,7 +223,7 @@ h1 {
     text-align: center;
     font-weight: 600;
     font-size: 6.4rem;
-    color: #27AE60;
+    color: #2ECC71;
 }
 
 #SuccessMessage {
@@ -277,7 +277,7 @@ h1 {
 
 #GAWDSLogo {
     display: block;
-    margin: 0 0 -2rem 0;
+    margin: 2rem 0 -2rem 0;
     width: 20rem;
     left: 50%;
     -webkit-transform: translateX(-50%);
@@ -286,6 +286,18 @@ h1 {
     -o-transform: translateX(-50%);
     transform: translateX(-50%);
     fill: #1ABC9C;
+}
+
+#DeveloperDayLogo {
+    margin: 4rem 0 -1rem 0;
+    width: 10rem;
+    height: 10rem;
+    left: 50%;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+    transform: translateX(-50%);
 }
 
 h2 {
@@ -325,7 +337,7 @@ button, form input[type=submit] {
     padding: 1rem 2rem 1rem 2rem;
     font-size: 1.8rem;
     text-align: center;
-    margin: 1rem auto;
+    margin: 1rem auto 4rem;
     border: solid 0.3rem rgba(255, 255, 255, 0.7);
     left: 50%;
     -webkit-transform: translateX(-50%);

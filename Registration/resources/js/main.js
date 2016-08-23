@@ -7,10 +7,10 @@
             CurrentField: 0,
             LastField: 0,
             BackgroundColors: [
-                '#2C3E50',
-                '#15324b',
-                '#114b38',
-                '#114623',
+                '#1a2a37',
+                '#112237',
+                '#0a2317',
+                '#102311',
                 '#212121'
             ],
             RequestXHR: undefined
@@ -144,10 +144,11 @@
                 }
             },
             BackgroundAnimation: function () {
-                t.to($Object.Body, 5, {
+                t.to($Object.Body, 2, {
                     // Bit Hack for Rounding
                     backgroundColor: Globals.BackgroundColors[(Math.random() * Globals.BackgroundColors.length) | 0],
-                    onComplete: Functions.BackgroundAnimation
+                    onComplete: Functions.BackgroundAnimation,
+                    delay: 5
                 });
             },
             ShowRegistrationForm: function () {
