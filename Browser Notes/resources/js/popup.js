@@ -36,11 +36,11 @@
         },
         DeleteNote: function(){
             var index = DOM.toDeleteNote.index();
-            console.log(index);
-            Data.notes.notes.splice(index,1);
-            console.log(Data.notes);
-            localStorage.setItem('StickyNotes',JSON.stringify(Data.notes));
-            Functions.PopulateEventViewer();
+            if(index >= 0){
+                Data.notes.notes.splice(index,1);
+                localStorage.setItem('StickyNotes',JSON.stringify(Data.notes));
+                Functions.PopulateEventViewer();
+            }
         }
     },
     Data = {
@@ -71,7 +71,7 @@
             DOM.AddButton.html('Added Successfully');
             Functions.PopulateEventViewer();
         });
-        $('span.close-button').bind('click',function(){
+        $('span.close-button').on('click',function(){
             DOM.toDeleteNote = $(this).parent().parent();
             Functions.DeleteNote();
         });
