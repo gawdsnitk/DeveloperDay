@@ -1,9 +1,9 @@
-// TODO:: Prevent XSS on backend
 
 var express = require('express');
 var app = express();
 var http = require('http').Server(app);
 var io = require('socket.io')(http);
+var xss = require('xss');
 
 var MongoClient = require('mongodb').MongoClient;
 
@@ -33,7 +33,7 @@ app.get('/recent', function(req, res) {
         if(err)
             throw err;
 
-        db.collection('messages').find().sort({createdAt: -1}).limit(20).toArray(function(err, result) {
+        db.collection('messages').find().sort({createdAt: -1}).limit(10).toArray(function(err, result) {
             if(err)
                 throw err;
 
@@ -45,6 +45,9 @@ app.get('/recent', function(req, res) {
 io.on('connection', function(socket) {
     console.log("new connection");
     socket.on('message', function(msgBody) {
+        if(msgBody.message) {
+            msgBody.message = xss(msgBody.message);
+        }
         if(msgBody.name && msgBody.message) {
             msgBody.createdAt = new Date();
             postToDb({fromId: msgBody.fromId, name: msgBody.name, message: msgBody.message, createdAt: msgBody.createdAt});
