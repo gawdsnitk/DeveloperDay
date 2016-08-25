@@ -1,0 +1,148 @@
+::-webkit-scrollbar
+{
+    width: 5px;
+    background-color: rgba(0,0,0,0);
+}
+::-webkit-scrollbar-track {
+    width: 5px;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    width: 5px;
+    background-color: darkcyan;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: "Segoe UI";
+    background-color: #1d1d1d;
+    width: 100vw;
+    height: 100vh;
+    color: #fff;
+    overflow-x: hidden;
+}
+.sidebar{
+    font-family: "Calibri Light";
+    color: #00ff00;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+    padding: 0;
+    background-color: #1d1d1d;
+}
+.terminal-bar{
+    background-color: #000;
+    font-family: "Segoe UI";
+    font-size: 10px;
+    padding: 5px;
+    color: #fff;
+}
+.message-box{
+    opacity: 0.8;
+    height: 87vh;
+    width: 100%;
+    padding: 10px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+#messages {
+    width: 100%;
+    list-style-type: none;
+}
+#messages li {
+    display: block;
+    position: relative;
+    margin-top: 10px;
+    padding: 15px;
+    width: 100%;
+    overflow-wrap: break-word;
+    border-radius: 5px;
+    background-color: transparent;
+    border: 1px green solid;
+    color: #00ff00;
+}
+#messages li.self {
+    background-color: rgba(255,255,255,0.1);
+    border-radius: 5px;
+    color: white;
+    border: 1px rgba(255,255,255,0.8) solid;
+}
+.details { position: absolute; bottom: 5px; right: 5px; font-size: 1rem; opacity: 0.5;}
+.left { max-width: 100px; color: rgba(255,255,255,0.8)}
+#messages li.self .left{
+    color: #00ff00;
+}
+
+form {
+    height: 10vh;
+    padding: 5px;
+    width: 100%;
+    border-top: 1px white solid;
+    background-color: rgba(0,0,0,0.5);
+}
+form input {
+    background-color: transparent;
+    max-width: 100%;
+    color: green;
+    border: none;
+    padding: 5px;
+}
+form button {
+    padding: 10px;
+    cursor: pointer;
+    color: green;
+    background-color: transparent;
+    border-radius: 3px;
+    border: 1px solid green;
+}
+form button:hover{
+    background-color: rgba(255,255,255,0.5);
+    font-weight: 700;
+    color: #000;
+}
+form button,input:focus{
+    outline: none;
+}
+
+@keyframes bgcolor {
+    0%   {background-color: #1a2a37;}
+    20%  {background-color: #112237;}
+    40%  {background-color: #0a2317;}
+    60% {background-color: #102311;}
+    80% {background-color: #212121;}
+    100% {background-color: #1a2a37;}
+}
+
+/*Presentation*/
+.presentation-area{
+    height: 100vh;
+    text-align: center;
+    color: #2ecc71;
+    font-size: 1.5em;
+    font-weight: 600;
+}
+.Presents div{
+    display: inline-flex;
+}
+.line{
+    position: relative;
+    height: 1px;
+    width: 70px;
+    background-color: #5d5d5d;
+    margin: 20px;
+    opacity: 0.5;
+}
+
+body {
+    animation-name: bgcolor;
+    animation-duration: 25s;
+    animation-iteration-count: infinite;
+}
+.head{
+    font-family: TimeBurner;
+    font-weight: 100;
+    font-size: 60px;
+    margin-top: 40px;
+    color: #1abc9c;
+}

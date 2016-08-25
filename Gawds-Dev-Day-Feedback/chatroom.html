@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Developer's Day Feedback </title>
+        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+        <link rel="stylesheet" href="/css/main.css"/>
+    </head>
+    <body>
+    <div class="col-xs-3 sidebar">
+        <div class="terminal-bar">
+            <span class="glyphicon glyphicon-cog">...</span><span>Developer Terminal</span>
+        </div>
+        <div class="message-box">
+            <ul id="messages"></ul>
+        </div>
+        <form action="">
+            <input class="container container-fluid" id="m" autocomplete="off" placeholder=">> click here to type your message"/>
+            <div style="float: right">press enter to send</div>
+        </form>
+    </div>
+
+    <div class="col-xs-9 presentation-area">
+        <div class="head">g a w d s</div>
+        <div class="Presents"><div class="line"></div><div> Presents </div><div class="line"></div></div>
+        <img width="150px" src="/png/Logo.png" id="DeveloperDayLogo">
+        <div>
+        </div>
+    </div>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/jquery.min.js"></script>
+    <script src="/js/timeago.js"></script>
+    <script>
+        if(!localStorage.getItem("ddnname")) {
+            window.location.pathname = "/";
+        }
+
+        setInterval(function() {
+            $('time.timeago').timeago();
+        }, 1000);
+
+        var socket = io();
+
+        // fetch latest messages one time
+        $(document).ready(function() {
+            $.get('/recent', function(data, err) {
+                if(data) {
+                    for(var i in data) {
+                        appendMessage(data[data.length-i-1]);
+                    }
+                }
+            })
+        });
+
+
+        $('form').submit(function(){
+            var msg = $($.parseHTML($('#m').val())).text();
+            if(msg) {
+                var data = {fromId: localStorage.getItem('ddkey'), name: localStorage.getItem('ddnname'), message: msg, createdAt: new Date().toISOString()};
+                appendMessage(data);
+                socket.emit('message', data);
+                $('#m').val('');
+            }
+            return false;
+        });
+
+        socket.on('message', function(msg) {
+                appendMessage(msg);
+        });
+
+        function appendMessage(message) {
+            if(message.fromId == localStorage.getItem('ddkey')) {
+                // Message sent by me
+                $("#messages").append("<li class='self'><div><span class='left'>"+message.name+">> </span>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
+            }
+            else {
+                $("#messages").append("<li class='other'><div><span class='left'>"+message.name+">> </span>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
+            }
+            scrollToEnd();
+        }
+
+        function scrollToEnd() {
+            $("div.message-box").animate({ scrollTop: $("ul#messages").height() }, 100);
+        }
+    </script>
+    </body>
+</html>
