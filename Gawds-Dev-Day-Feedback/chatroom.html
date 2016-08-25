@@ -2,30 +2,102 @@
 <html>
     <head>
         <title>Developer's Day Feedback </title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="/css/bootstrap.min.css"/>
         <link rel="stylesheet" href="/css/main.css"/>
     </head>
     <body>
-    <div class="col-xs-3 sidebar">
-        <div class="terminal-bar">
-            <span class="glyphicon glyphicon-cog">...</span><span>Developer Terminal</span>
+    <section class="row">
+        <div class="col-md-3 sidebar">
+            <div class="terminal-bar">
+                <span class="glyphicon glyphicon-cog">...</span><span>Developer Terminal</span><span style="float: right" class="close-button glyphicon glyphicon-remove"></span>
+            </div>
+            <div class="message-box">
+                <ul id="messages"></ul>
+            </div>
+            <form action="">
+                <input class="container container-fluid" id="m" autocomplete="off" placeholder=">> click here to type your message"/>
+                <div style="float: right">press enter to send</div>
+            </form>
         </div>
-        <div class="message-box">
-            <ul id="messages"></ul>
-        </div>
-        <form action="">
-            <input class="container container-fluid" id="m" autocomplete="off" placeholder=">> click here to type your message"/>
-            <div style="float: right">press enter to send</div>
-        </form>
-    </div>
 
-    <div class="col-xs-9 presentation-area">
-        <div class="head">g a w d s</div>
-        <div class="Presents"><div class="line"></div><div> Presents </div><div class="line"></div></div>
-        <img width="150px" src="/png/Logo.png" id="DeveloperDayLogo">
-        <div>
+        <div class="col-md-9 presentation-area">
+            <div id="show-chat" class="glyphicon glyphicon-chevron-right"></div>
+            <h3 class="head">g.a.w.d.s</h3>
+            <h3>Developer Day</h3>
+            <div class="line"></div>
+            <br/>
+            <span class="slide-control-left glyphicon glyphicon-chevron-left"></span>
+            <img width="120px" style="" src="/png/Logo.png" id="DeveloperDayLogo">
+            <span class="slide-control-right glyphicon glyphicon-chevron-right"></span>
+            <section class="slideviewer">
+                <div class="SlideBox"></div>
+                <div class="slide">
+                    <h2>Slide title 1</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 2</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 3</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 4</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 5</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 6</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 7</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Slide title 8</h2>
+                    <h4>Slide content</h4>
+                    <div>
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                    </div>
+                </div>
+            </section>
+            <div class="grass">
+                <div class="small"></div>
+                <div class="big"></div>
+                <div class="mid"></div>
+                <div class="big"></div>
+                <div class="small"></div>
+            </div>
         </div>
-    </div>
+    </section>
     <script src="/socket.io/socket.io.js"></script>
     <script src="/js/jquery.min.js"></script>
     <script src="/js/timeago.js"></script>
@@ -70,17 +142,67 @@
         function appendMessage(message) {
             if(message.fromId == localStorage.getItem('ddkey')) {
                 // Message sent by me
-                $("#messages").append("<li class='self'><div><span class='left'>"+message.name+">> </span>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
+                $("#messages").append("<li class='self'><div>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
             }
             else {
-                $("#messages").append("<li class='other'><div><span class='left'>"+message.name+">> </span>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
+                $("#messages").append("<li class='other'><div><span class='left'>"+message.name+"</span><br/>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
             }
             scrollToEnd();
         }
 
         function scrollToEnd() {
-            $("div.message-box").animate({ scrollTop: $("ul#messages").height() }, 100);
+            $("div.message-box").animate({ scrollTop: $("ul#messages").height() }, 10);
         }
+        $('span.close-button').on('click',function(){
+            $('.sidebar').css({
+                display: 'none'
+            });
+            $('.presentation-area').css({
+                width: '100%'
+            });
+            $('div#show-chat').css({
+                opacity: 1
+            });
+        });
+        $('div#show-chat').on('click',function(){
+            $('.sidebar').css({
+                display: 'block'
+            });
+            var width = window.innerWidth - $('.sidebar').width();
+            $('.presentation-area').css({
+                width: width
+            });
+            $('div#show-chat').css({
+                opacity: 0
+            });
+        });
+
+        var NumSlides = 8,
+            curSlide = 0;
+        var DOM = {
+            slides : [],
+            curSlide : 0,
+            previousSlide : 0
+        };
+        slides = $('.slide').toArray();
+        function slideChange(dir){
+            previousSlide = curSlide;
+            if(curSlide == 0 && dir == -1)   curSlide = 8;
+            curSlide = (curSlide+dir)%NumSlides;
+            $(slides[previousSlide]).css({
+                display: 'none'
+            });
+            $(slides[curSlide]).css({
+                display: 'block'
+            });
+        }
+
+        $('span.slide-control-left').on('click',function(){
+            slideChange(-1);
+        });
+        $('span.slide-control-right').on('click',function(){
+            slideChange(1);
+        });
     </script>
     </body>
 </html>
