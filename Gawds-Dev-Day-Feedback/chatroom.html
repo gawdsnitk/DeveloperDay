@@ -196,12 +196,15 @@
                 display: 'block'
             });
         }
-
         $('span.slide-control-left').on('click',function(){
             slideChange(-1);
         });
         $('span.slide-control-right').on('click',function(){
             slideChange(1);
+        });
+        $(window).bind('keyup',function(e){
+            if(e.keyCode == 37) slideChange(-1);
+            else if(e.keyCode == 39)   slideChange(1);
         });
     </script>
     </body>
