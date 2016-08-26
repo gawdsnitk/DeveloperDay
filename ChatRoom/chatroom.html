@@ -1,211 +1,331 @@
 <!doctype html>
 <html>
-    <head>
-        <title>Developer's Day Feedback </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="/css/bootstrap.min.css"/>
-        <link rel="stylesheet" href="/css/main.css"/>
-    </head>
-    <body>
-    <section class="row">
+<head>
+    <title>Developer's Day Feedback </title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+<div class="container-fluid">
+    <div class="row">
         <div class="col-md-3 sidebar">
             <div class="terminal-bar">
-                <span class="glyphicon glyphicon-cog">...</span><span>Developer Terminal</span><span style="float: right" class="close-button glyphicon glyphicon-remove"></span>
+                <span class="glyphicon glyphicon-cog"></span><span> Developer Terminal</span><span style="float: right"
+                                                                                                   class="close-button glyphicon glyphicon-remove"></span>
             </div>
             <div class="message-box">
                 <ul id="messages"></ul>
             </div>
             <form action="">
-                <input class="container container-fluid" id="m" autocomplete="off" placeholder=">> click here to type your message"/>
+                <input class="container container-fluid" id="m" autocomplete="off"
+                       placeholder=">> click here to type your message"/>
                 <div style="float: right">press enter to send</div>
             </form>
         </div>
-
         <div class="col-md-9 presentation-area">
             <div id="show-chat" class="glyphicon glyphicon-chevron-right"></div>
-            <h3 class="head">g.a.w.d.s</h3>
-            <h3>Developer Day</h3>
-            <div class="line"></div>
-            <br/>
-            <span class="slide-control-left glyphicon glyphicon-chevron-left"></span>
-            <img width="120px" style="" src="/png/Logo.png" id="DeveloperDayLogo">
-            <span class="slide-control-right glyphicon glyphicon-chevron-right"></span>
-            <section class="slideviewer">
-                <div class="SlideBox"></div>
+            <div class="head-wrapper">
+                <img width="80px" style="" src="/png/Logo.png">
+                <div style="position: relative; display: inline-block; top: 10px;">
+                    <h3 class="head">g.a.w.d.s</h3>
+                    <h3>Developer Day</h3>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="control-wrapper">
+                <span class="slide-control-left glyphicon glyphicon-chevron-left"></span>
+                <span id="SlideMonitor">1/15</span>
+                <span class="slide-control-right glyphicon glyphicon-chevron-right"></span>
+                <div class="comment">or use < and > arrow keys</div>
+            </div>
+            <section class="slide-viewer">
                 <div class="slide">
-                    <h2>Slide title 1</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>What is it?</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        Simply a web <strong>client</strong>, seeking some kind of resource from server. Resource may be
+                        like anything from a simple html document to some video, audio, images or any other resource
+                        available on the network.
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 2</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>Basic Working</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        <img src="/png/BrowserWorking.png"/>
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 3</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>Web Server & Web Client</h4>
+                </div>
+                <div class="slide">
+                    <h2>Browser</h2>
+                    <h4>Restaurant Analogy</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        <ul style="margin-top: 20px">
+                            <li>Web client as Customer</li>
+                            <li class="comment">&</li>
+                            <li>Server as a Chef</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 4</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>Protocols</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        Set of rules governing transaction between
+                        client and server.<br/>But whats the requirement?
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 5</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>Protocols</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        <ul>
+                            <li>TCP/IP</li>
+                            <li>HTTP</li>
+                            <li>HTTPS</li>
+                            <li>FTP</li>
+                            <li>DHCP</li>
+                            <li>SMTP</li>
+                        </ul>
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 6</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>http <span class="comment">&</span> https</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        HTTP is the language/grammar used by browsers (such as Chrome, Explorer, Safari, etc) to talk to
+                        web servers.
+                        <br/>HTTPS is a more secure form of HTTP
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 7</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>Characteristics of HTTP</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        Request and Response protocol
+                        <br/>Stateless….. What the ……?
+                        <br/>A Blind Date
                     </div>
                 </div>
                 <div class="slide">
-                    <h2>Slide title 8</h2>
-                    <h4>Slide content</h4>
+                    <h2>Browser</h2>
+                    <h4>Blind Date</h4>
                     <div>
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dignissim purus sapien, nec commodo nulla aliquam quis. Nulla placerat sem vitae lectus maximus, et placerat odio suscipit. Sed fermentum at ipsum sit amet gravida. Interdum et malesuada fames ac ante ipsum primis in faucibus. Suspendisse potenti. Quisque consequat ullamcorper dignissim. Vestibulum in odio vitae libero sodales eleifend quis sed nisi. In est lectus, lobortis ac posuere blandit, accumsan a augue.
+                        <img width="500px" src="/png/BrowserDate.png"/>
                     </div>
+                </div>
+                <div class="slide">
+                    <h2>Browser</h2>
+                    <h4>Extensions</h4>
+                    <div>
+                        A piece of code enhancing the capability
+                        of a browser,
+                        <br/>providing some extra services,
+                        <br/>modify web pages or simply do nothing.
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Browser</h2>
+                    <h4>Some Extensions at work</h4>
+                    <div>
+                        <ul>
+                            <li>Facebook Ticker</li>
+                            <li class="comment">&</li>
+                            <li>Sticky Notes</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>HTML</h2>
+                    <h4><i>HyperText Markup Language</i></h4>
+                    <div>
+                        <i>Tags, Elements, Attributes</i>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>HTML</h2>
+                    <h4><i>What is <u>H</u>ypertext <u>M</u>arkup</i></h4>
+                    <div>
+                        HyperText refers to how web pages are linked
+                        <br/>Markup is the process of using <strong>tags</strong> to tell the browser how to display the
+                        page
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>HTML</h2>
+                    <h4><i>Tags</i></h4>
+                    <div class="code" style="">
+                        &lt;!DOCTYPE html&gt;<br/>
+                        &lt;html&gt;<br/>
+                        &lt;head&gt;<br/>
+                        &lt;title&gt;Paragraph Example&lt;/title&gt;<br/>
+                        &lt;/head&gt;<br/>
+                        &lt;body&gt;<br/>
+                        &lt;p&gt;Here is a first paragraph of text.&lt;/p&gt;<br/>
+                        &lt;p&gt;Here is a second paragraph of text.&lt;/p&gt;<br/>
+                        &lt;p&gt;Here is a third paragraph of text.&lt;/p&gt;<br/>
+                        &lt;/body&gt;<br/>
+                        &lt;/html&gt;<br/>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>HTML</h2>
+                    <h4><i>Elements <span class="comment">&</span> Attributes</i></h4>
+                    <div class="code">
+                        &lt;p align=&quot;left&quot;&gt;This is left aligned&lt;/p&gt;<br/>
+                        &lt;p align=&quot;center&quot;&gt;This is center aligned&lt;/p&gt;<br/>
+                        &lt;textarea class=&quot;form-input&quot; id=&quot;comment&quot; <br/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;placeholder=&quot;Enter
+                        your text here&quot;&gt;&lt;/textarea&gt;
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>HTML</h2>
+                    <h4><i><strong>Meta</strong> <span class="comment">&</span> other tags</i></h4>
+                    <div class="code">
+                        <div class="comment">&lt;!-- Meta tag examples --&gt;</div>
+                        &lt;head&gt;<br/>
+                        &lt;title&gt;Meta Tags Example&lt;/title&gt;<br/>
+                        &lt;meta name=&quot;keywords&quot; content=&quot;HTML, Meta Tags, Metadata&quot; /&gt;<br/>
+                        &lt;meta name=&quot;description&quot; content=&quot;Learning about Meta Tags.&quot; /&gt;<br/>
+                        &lt;meta ame=&quot;author&quot; content=&quot;GAWDS&quot; /&gt;<br/>
+                        &lt;meta charset="UTF-8" /&gt;<br/>
+                        &lt;/head&gt;<br/>
+                        &lt;div&gt; Block & &lt;span&gt;inline&lt;/span&gt; elements&lt;/div&gt;<br/>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>HTML</h2>
+                    <h4><i>the structure for your extension</i></h4>
+                    <div class="code">
+                        &lt;!DOCTYPE HTML&gt;<br/>
+                        &lt;html lang=&quot;en&quot;&gt;<br/>
+                        &lt;head&gt;<br/>
+                        &lt;meta charset=&quot;utf-8&quot;&gt;<br/>
+                        &lt;meta name=&quot;viewport&quot;
+                        content=&quot;width=device-width,initial-scale=1.0&quot;&gt;<br/>
+                        &lt;title&gt;Facebook Ticker&lt;/title&gt;<br/>
+                        &lt;link rel=&quot;stylesheet&quot; href=&quot;resources/css/main.css&quot;&gt;<br/>
+                        &lt;/head&gt;<br/>
+                        &lt;body&gt;<br/>
+                        &lt;h1&gt;Facebook Ticker&lt;/h1&gt;<br/>
+                        &lt;button id=&quot;Add&quot;&gt;Add&lt;/button&gt;<br/>
+                        &lt;span id=&quot;Number&quot;&gt;&lt;/span&gt;<br/>
+                        &lt;div id=&quot;FeedContainer&quot;&gt;<br/>
+                        &lt;h4&gt;Loading...&lt;/h4&gt;<br/>
+                        &lt;/div&gt;<br/>
+                        &lt;/body&gt;<br/>
+                        &lt;script type=&quot;text/javascript&quot; src=&quot;resources/js/jquery.min.js&quot;&gt;&lt;/script&gt;<br/>
+                        &lt;script type=&quot;text/javascript&quot; src=&quot;resources/js/main.js&quot;&gt;&lt;/script&gt;<br/>
+                        &lt;/html&gt;<br/>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>it is <strong>Not</strong> java</h4>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>Data Types</h4>
+                    <div>
+                        <ul>
+                            <li>The Universal declaration VAR</li>
+                            <li>Number &nbsp;&nbsp;&nbsp;-&nbsp;&nbsp; 1024</li>
+                            <li>String &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;"Hello"</li>
+                            <li>Boolean - true/false</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>Complex Datatypes</h4>
+                    <div>
+                        <ul>
+                            <li>Arrays</li>
+                            <li>&</li>
+                            <li>Objects</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>Loops</h4>
+                    <div>
+                        <ul>
+                            <li>for</li>
+                            <li>&</li>
+                            <li>while</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>functions</h4>
+                    <div class="code">
+                        function MyFunctionName(){&nbsp;&nbsp;&nbsp;&nbsp;<span
+                            class="comment">/*Function declaration*/</span>
+                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;function statement;&nbsp;&nbsp;&nbsp;&nbsp;
+                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;statement 2;
+                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;.
+                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;.
+                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;.
+                        <br/>}
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>DOM</h4>
+                    <div>
+                        Document Object Model
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>jQuery</h4>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>jQuery</h4>
+                    <div>
+                        <ul>
+                            <li>Event Handling</li>
+                            <li class="comment">&</li>
+                            <li>DOM Manipulation</li>
+                            <li class="comment">&</li>
+                            <li>AJAX</li>
+                            <li class="comment">( Asynchronous Javascript And XML )</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>API</h2>
+                    <h4>Application Programming Interface</h4>
+                </div>
+                <div class="slide">
+                    <h2>API</h2>
+                    <h4>How things work</h4>
+                    <img src="/png/API4.png">
+                </div>
+                <div class="slide">
+                    <h2>API</h2>
+                    <img src="/png/API1.png">
+                </div>
+                <div class="slide">
+                    <h2>API</h2>
+                    <img src="/png/API2.png">
                 </div>
             </section>
-            <div class="grass">
-                <div class="small"></div>
-                <div class="big"></div>
-                <div class="mid"></div>
-                <div class="big"></div>
-                <div class="small"></div>
-            </div>
         </div>
-    </section>
-    <script src="/socket.io/socket.io.js"></script>
-    <script src="/js/jquery.min.js"></script>
-    <script src="/js/timeago.js"></script>
-    <script>
-        if(!localStorage.getItem("ddnname")) {
-            window.location.pathname = "/";
-        }
-
-        setInterval(function() {
-            $('time.timeago').timeago();
-        }, 1000);
-
-        var socket = io();
-
-        // fetch latest messages one time
-        $(document).ready(function() {
-            $.get('/recent', function(data, err) {
-                if(data) {
-                    for(var i in data) {
-                        appendMessage(data[data.length-i-1]);
-                    }
-                }
-            })
-        });
-
-
-        $('form').submit(function(){
-            var msg = $($.parseHTML($('#m').val())).text();
-            if(msg) {
-                var data = {fromId: localStorage.getItem('ddkey'), name: localStorage.getItem('ddnname'), message: msg, createdAt: new Date().toISOString()};
-                appendMessage(data);
-                socket.emit('message', data);
-                $('#m').val('');
-            }
-            return false;
-        });
-
-        socket.on('message', function(msg) {
-                appendMessage(msg);
-        });
-
-        function appendMessage(message) {
-            if(message.fromId == localStorage.getItem('ddkey')) {
-                // Message sent by me
-                $("#messages").append("<li class='self'><div>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
-            }
-            else {
-                $("#messages").append("<li class='other'><div><span class='left'>"+message.name+"</span><br/>" + message.message +" <span class='details'><time class='timeago' datetime='"+message.createdAt+"'>just now</time></span></div></li>");
-            }
-            scrollToEnd();
-        }
-
-        function scrollToEnd() {
-            $("div.message-box").animate({ scrollTop: $("ul#messages").height() }, 10);
-        }
-        $('span.close-button').on('click',function(){
-            $('.sidebar').css({
-                display: 'none'
-            });
-            $('.presentation-area').css({
-                width: '100%'
-            });
-            $('div#show-chat').css({
-                opacity: 1
-            });
-        });
-        $('div#show-chat').on('click',function(){
-            $('.sidebar').css({
-                display: 'block'
-            });
-            var width = window.innerWidth - $('.sidebar').width();
-            $('.presentation-area').css({
-                width: width
-            });
-            $('div#show-chat').css({
-                opacity: 0
-            });
-        });
-
-        var NumSlides = 8,
-            curSlide = 0;
-        var DOM = {
-            slides : [],
-            curSlide : 0,
-            previousSlide : 0
-        };
-        slides = $('.slide').toArray();
-        function slideChange(dir){
-            previousSlide = curSlide;
-            if(curSlide == 0 && dir == -1)   curSlide = 8;
-            curSlide = (curSlide+dir)%NumSlides;
-            $(slides[previousSlide]).css({
-                display: 'none'
-            });
-            $(slides[curSlide]).css({
-                display: 'block'
-            });
-        }
-        $('span.slide-control-left').on('click',function(){
-            slideChange(-1);
-        });
-        $('span.slide-control-right').on('click',function(){
-            slideChange(1);
-        });
-        $(window).bind('keyup',function(e){
-            if(e.keyCode == 37) slideChange(-1);
-            else if(e.keyCode == 39)   slideChange(1);
-        });
-    </script>
-    </body>
+    </div>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="/js/jquery.min.js"></script>
+<script src="/js/TweenMax.min.js"></script>
+<script src="/js/timeago.js"></script>
+<script src="/js/main.js"></script>
+<script src="/js/frontend.js"></script>
+</body>
 </html>

@@ -3,7 +3,6 @@
     <head>
         <title>Developer's Day Feedback</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="public/css/bootstrap.min.css">
         <style>
             *{
                 box-sizing: border-box;
@@ -13,7 +12,7 @@
             }
             form{
                 position:absolute; left: 50%; top: 50%;-webkit-transform: translate(-50%,-50%);-moz-transform: translate(-50%,-50%);-ms-transform: translate(-50%,-50%);-o-transform: translate(-50%,-50%);transform: translate(-50%,-50%);
-                border: 2px solid #0a2317;
+                border: 2px solid #fff;
                 width: 400px;
                 padding: 10px;
             }
@@ -83,7 +82,7 @@
                     window.location.pathname = '/chatroom';
                 } else{
                     $('form').css({
-                        borderColor: 'red'
+                        borderColor: '#F44336'
                     });
                 }
             });
@@ -92,7 +91,7 @@
             var name = $('input#name').val();
             if(name.length > 0){
                 $('form').css({
-                    borderColor: '#0a2317'
+                    borderColor: '#fff'
                 });
             }
         });
