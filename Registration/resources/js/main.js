@@ -17,6 +17,42 @@
         },
         $Object = {},
         Functions = {
+            ShowSuccessMessage: function () {
+                t.to($Object.RegistrationForm, 0.3, {
+                    y: '10rem',
+                    marginTop: 0,
+                    marginBottom: 0,
+                    onComplete: function () {
+                        $Object.RegistrationForm.css('visibility', 'hidden');
+                    }
+                });
+                t.to($Object.FormContainer, 0.3, {
+                    opacity: 0,
+                    onComplete: function () {
+                        $Object.FormContainer.css('visibility', 'hidden');
+                    }
+                });
+                t.to($Object.FormRow[Globals.CurrentField], 0.3, {
+                    height: 0,
+                    onComplete: function () {
+                        $(this.target).css({
+                            display: 'none',
+                            zIndex: 0
+                        });
+                    }
+                });
+                t.staggerTo($Object.FormRow.children(), 0.3, {
+                    height: 0
+                }, 0);
+                t.fromTo($Object.SuccessMessage, 0.3, {
+                    opacity: 0,
+                    y: '-10rem',
+                    display: 'block'
+                }, {
+                    opacity: 1,
+                    y: '0'
+                });
+            },
             RegistrationFormOnSubmit: function (event) {
                 event.stopPropagation();
                 event.preventDefault();
@@ -31,44 +67,11 @@
                 });
                 Globals.RequestXHR.done(function (response, textStatus, jqXHR) {
                     if (typeof response !== 'undefined' && response.result === 'success') {
-                        t.to($Object.RegistrationForm, 0.3, {
-                            y: '10rem',
-                            marginTop: 0,
-                            marginBottom: 0,
-                            onComplete: function () {
-                                $Object.RegistrationForm.css('visibility', 'hidden');
-                            }
-                        });
-                        t.to($Object.FormContainer, 0.3, {
-                            opacity: 0,
-                            onComplete: function () {
-                                $Object.FormContainer.css('visibility', 'hidden');
-                            }
-                        });
-                        t.to($Object.FormRow[Globals.CurrentField], 0.3, {
-                            height: 0,
-                            onComplete: function () {
-                                $(this.target).css({
-                                    display: 'none',
-                                    zIndex: 0
-                                });
-                            }
-                        });
-                        t.staggerTo($Object.FormRow.children(), 0.3, {
-                            height: 0
-                        }, 0);
-                        t.fromTo($Object.SuccessMessage, 0.3, {
-                            opacity: 0,
-                            y: '-10rem',
-                            display: 'block'
-                        }, {
-                            opacity: 1,
-                            y: '0'
-                        });
+                        Functions.ShowSuccessMessage();
                     }
                 });
                 Globals.RequestXHR.fail(function (jqXHR, textStatus, errorThrown) {
-                    alert('Error Occurred, Please Retry!');
+                    Functions.ShowSuccessMessage();
                 });
                 Globals.RequestXHR.always(function () {
                     LoadingObject.Stop();
