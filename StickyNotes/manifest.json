@@ -1,0 +1,12 @@
+{
+  "manifest_version": 2,
+  "name": "Sticky Notes",
+  "description": "Keep your notes anytime, anywhere.",
+  "version": "1.0",
+  "browser_action": {
+    "default_icon": "icon.png",
+    "default_popup": "popup.html",
+    "default_title": "Make Neat Notes"
+  },
+  "permissions": ["<all_urls>"]
+}
