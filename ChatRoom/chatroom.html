@@ -9,7 +9,7 @@
 <body>
 <div class="container-fluid">
     <div class="row">
-        <div class="col-md-3 sidebar">
+        <div class="col-sm-3 sidebar">
             <div class="terminal-bar">
                 <span class="glyphicon glyphicon-cog"></span><span> Developer Terminal</span><span style="float: right"
                                                                                                    class="close-button glyphicon glyphicon-remove"></span>
@@ -23,16 +23,16 @@
                 <div style="float: right">press enter to send</div>
             </form>
         </div>
-        <div class="col-md-9 presentation-area">
+        <div class="col-sm-9 presentation-area">
             <div id="show-chat" class="glyphicon glyphicon-chevron-right"></div>
-            <div class="head-wrapper">
+            <a class="head-wrapper" target="_blank" href="https://github.com/gawdsnitk/DeveloperDay">
                 <img width="80px" style="" src="/png/Logo.png">
                 <div style="position: relative; display: inline-block; top: 10px;">
                     <h3 class="head">g.a.w.d.s</h3>
                     <h3>Developer Day</h3>
                     <div class="line"></div>
                 </div>
-            </div>
+            </a>
             <div class="control-wrapper">
                 <span class="slide-control-left glyphicon glyphicon-chevron-left"></span>
                 <span id="SlideMonitor">1/15</span>
@@ -204,19 +204,19 @@
                         &lt;!DOCTYPE HTML&gt;<br/>
                         &lt;html lang=&quot;en&quot;&gt;<br/>
                         &lt;head&gt;<br/>
-                        &lt;meta charset=&quot;utf-8&quot;&gt;<br/>
-                        &lt;meta name=&quot;viewport&quot;
-                        content=&quot;width=device-width,initial-scale=1.0&quot;&gt;<br/>
-                        &lt;title&gt;Facebook Ticker&lt;/title&gt;<br/>
-                        &lt;link rel=&quot;stylesheet&quot; href=&quot;resources/css/main.css&quot;&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta charset=&quot;utf-8&quot;&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;meta name=&quot;viewport&quot;
+                         content=&quot;width=device-width,initial-scale=1.0&quot;&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;title&gt;Facebook Ticker&lt;/title&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;link rel=&quot;stylesheet&quot; href=&quot;resources/css/main.css&quot;&gt;<br/>
                         &lt;/head&gt;<br/>
                         &lt;body&gt;<br/>
-                        &lt;h1&gt;Facebook Ticker&lt;/h1&gt;<br/>
-                        &lt;button id=&quot;Add&quot;&gt;Add&lt;/button&gt;<br/>
-                        &lt;span id=&quot;Number&quot;&gt;&lt;/span&gt;<br/>
-                        &lt;div id=&quot;FeedContainer&quot;&gt;<br/>
-                        &lt;h4&gt;Loading...&lt;/h4&gt;<br/>
-                        &lt;/div&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;h1&gt;Facebook Ticker&lt;/h1&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;button id=&quot;Add&quot;&gt;Add&lt;/button&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;span id=&quot;Number&quot;&gt;&lt;/span&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;div id=&quot;FeedContainer&quot;&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h4&gt;Loading...&lt;/h4&gt;<br/>
+                        &nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;<br/>
                         &lt;/body&gt;<br/>
                         &lt;script type=&quot;text/javascript&quot; src=&quot;resources/js/jquery.min.js&quot;&gt;&lt;/script&gt;<br/>
                         &lt;script type=&quot;text/javascript&quot; src=&quot;resources/js/main.js&quot;&gt;&lt;/script&gt;<br/>
@@ -224,8 +224,90 @@
                     </div>
                 </div>
                 <div class="slide">
+                    <h2>Css</h2>
+                    <h4><i>Cascading Style Sheets</i></h4>
+                    <div>Imagine playing pokemon go with every pokemon looking the same</div>
+                </div>
+                <div class="slide">
+                    <h2>Css</h2>
+                    <h4><i>Basic syntax <span class="comment">&</span> Selectors</i></h4>
+                    <div>
+                        <div class="code">
+                            selector {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;style-attribute: value;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;.<br/>
+                            }<br/>
+                            <div class="commment">/*A practical example*/</div>
+                            body {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: red;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px;<br/>
+                            }
+                            <div class="commment">/*The universal selector * */</div>
+                            * {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;box-sizing: border-box;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 10px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 10px;<br/>
+                            }
+                            <div class="commment">/*The id selector*/</div>
+                            #id {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 30px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 40px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #000000;<br/>
+                            }
+                            <div class="commment">/*The class selector*/</div>
+                            .classname {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 30px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 40px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: 1px solid #000000;<br/>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Css</h2>
+                    <h4><i>Lets' start styling the extension</i></h4>
+                    <div>
+                        <div class="code">
+                            html, body {    <br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;width: 200px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;height: 200px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 0;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;background-color: #FFFFFF;<br/>
+                            }<br/>
+                            <br/>
+                            h1 {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 20px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                            }<br/>
+                            <br/>
+                            h4 {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 14px;<br/>
+                            }<br/>
+                            <br/>
+                            #FeedContainer {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: center;<br/>
+                            }<br/>
+                            <br/>
+                            .Feed {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;padding: 6px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;margin: 6px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;font-size: 13px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border: solid 1px #bcbcbc;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;border-radius: 6px;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;text-align: justify;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;word-wrap: break-word;<br/>
+                            }<br/>
+
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
                     <h2>Javascript</h2>
                     <h4>it is <strong>Not</strong> java</h4>
+                    <div>Making your pokemon <i>dance</i></div>
                 </div>
                 <div class="slide">
                     <h2>Javascript</h2>
@@ -265,14 +347,16 @@
                     <h2>Javascript</h2>
                     <h4>functions</h4>
                     <div class="code">
-                        function MyFunctionName(){&nbsp;&nbsp;&nbsp;&nbsp;<span
-                            class="comment">/*Function declaration*/</span>
-                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;function statement;&nbsp;&nbsp;&nbsp;&nbsp;
+                        function MyFunctionName(){&nbsp;&nbsp;&nbsp;&nbsp;
+                        <span class="comment">/*Function declaration*/</span>
+                        <br/>&nbsp;&nbsp;&nbsp;&nbsp;statement 1;&nbsp;&nbsp;&nbsp;&nbsp;
                         <br/>&nbsp;&nbsp;&nbsp;&nbsp;statement 2;
                         <br/>&nbsp;&nbsp;&nbsp;&nbsp;.
                         <br/>&nbsp;&nbsp;&nbsp;&nbsp;.
                         <br/>&nbsp;&nbsp;&nbsp;&nbsp;.
                         <br/>}
+                        <br/>MyfunctionName();
+                        <span class="comment">/*Function Call*/</span>
                     </div>
                 </div>
                 <div class="slide">
@@ -301,8 +385,40 @@
                     </div>
                 </div>
                 <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>AJAX</h4>
+                    <div>
+                        <img src="/png/jsAjax.jpg">
+                    </div>
+                </div>
+                <div class="slide">
+                    <h2>Javascript</h2>
+                    <h4>JSON</h4>
+                    <div>
+                        JavaScript Object Notation
+                        <div class="code">
+                            {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"manifest_version": 2,<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"name": "Facebook Ticker",<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"description": "This extension allows you to view latest posts from your favorite Facebook Pages.",<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"version": "1.0",<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"browser_action": {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"default_icon": "icon.png",<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;"default_popup": "popup.html"<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;},<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;"permissions": ["&lt;all_urls&gt;"]<br/>
+                            }
+                        </div>
+                    </div>
+                </div>
+                <div class="slide">
                     <h2>API</h2>
                     <h4>Application Programming Interface</h4>
+                </div>
+                <div class="slide">
+                    <h2>API</h2>
+                    <h4><i>API - the general flow</i></h4>
+                    <img src="/png/API3.png">
                 </div>
                 <div class="slide">
                     <h2>API</h2>
@@ -311,11 +427,37 @@
                 </div>
                 <div class="slide">
                     <h2>API</h2>
+                    <h4>My name is API. What's yours?</h4>
                     <img src="/png/API1.png">
                 </div>
                 <div class="slide">
                     <h2>API</h2>
+                    <h4>Search using a normal website</h4>
                     <img src="/png/API2.png">
+                </div>
+                <div class="slide">
+                    <h2>API</h2>
+                    <h4>Search using a Web Service</h4>
+                    <img style="max-width: 900px; margin-top: -40px;" src="/png/API5.png">
+                </div>
+                <div class="slide">
+                    <h2>Get! Set! Go!</h2>
+                    <h4><i>Let's catch'em all</i></h4>
+                    <div>
+                        <div class="code">
+                            var $FeedContainer = $('#FeedContainer', document);<br/>
+                            $.get('https://graph.facebook.com/gawdsnitkkr/feed?access_token=1190755740976083|8d59f9b9119f123e50533bee27e34453',<br/>
+                            function (response) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;var Data = response.data;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;$FeedContainer.html('');<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;for (var i = 0; i < Data.length; i++) {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;if (typeof Data[i].message !== 'undefined') {<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;$FeedContainer.append('&lt;div class="Feed"&gt;' + Data[i].message + '&lt;/div>'&gt;;<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                            &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+                            });<br/>
+                        </div>
+                    </div>
                 </div>
             </section>
         </div>

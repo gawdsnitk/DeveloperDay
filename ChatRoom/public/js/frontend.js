@@ -53,7 +53,7 @@ function slideChange(dir){
     var SlideOut = $(slides[DOM.previousSlide]);
     t.killTweensOf(SlideOut);
     t.to(SlideOut,0.5,{
-    marginLeft: '-20px',
+    marginLeft: ''+(dir>0 ? -20 : 40)+'px',
     opacity: 0,
     onComplete: function(){
             t.set(SlideOut,{
@@ -62,7 +62,7 @@ function slideChange(dir){
                     var SlideIn = $(slides[DOM.curSlide]);
                     t.killTweensOf(SlideIn);
                     t.staggerFromTo(SlideIn.children(),0.5,{
-                        x: '100px',
+                        x: ''+(dir>0 ? 100 : -100)+'px',
                         opacity: 0
                     },{
                         x: 0,
@@ -71,11 +71,10 @@ function slideChange(dir){
                     },0.1);
                     t.fromTo(SlideIn,1, {
                         display: 'block',
-                        opacity: 0,
-                        marginLeft: '40px'
+                        margin: 0,
+                        opacity: 0
                     },{
-                        opacity: 1,
-                        marginLeft: 0
+                        opacity: 1
                     });
                     DOM.slideMonitor.html((DOM.curSlide+1)+"/"+slides.length);
                     window.history.pushState(DOM.curSlide, 'Slide - ' + DOM.curSlide, window.location.href.split('#')[0] + '#' + DOM.curSlide);
