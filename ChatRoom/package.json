@@ -4,6 +4,7 @@
   "description": "Feedback page dday",
   "dependencies": {
     "express": "^4.14.0",
+    "mongodb": "^2.2.8",
     "socket.io": "^1.4.8"
   }
 }
